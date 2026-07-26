@@ -1,0 +1,12 @@
+{
+  "name": "agent-server-mock",
+  "version": "1.0.0",
+  "description": "Mock A2A Server Agent (weather-reporter) — A2A v1.0 JSON-RPC + SSE, 零依赖",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
