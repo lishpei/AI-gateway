@@ -1,0 +1,12 @@
+{
+  "name": "mcp-server-mock",
+  "version": "1.0.0",
+  "description": "Mock MCP Server (考勤) — 支持 Streamable HTTP 与旧版 HTTP+SSE 双传输, 零依赖",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
