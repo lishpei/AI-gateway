@@ -1,0 +1,114 @@
+/* 全局样式（方案B · 浅色现代企业风） */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: #F4F6FB;
+  color: #1E293B;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- 品牌区 ---------- */
+.brand {
+  display: flex; align-items: center; gap: 11px;
+  padding: 20px 16px 18px;
+  border-bottom: 1px solid #E6EAF2;
+  margin-bottom: 14px;
+}
+.brand-logo {
+  width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
+  background: linear-gradient(135deg, #4F46E5, #7C3AED);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, .3);
+}
+.brand-name { font-size: 15px; font-weight: 700; color: #1E293B; line-height: 1.2; }
+.brand-sub { font-size: 10px; color: #94A3B8; letter-spacing: 1px; }
+
+/* ---------- 侧栏底部状态卡 ---------- */
+.sidebar-foot {
+  margin: auto 12px 14px;
+  padding: 12px 14px;
+  background: #F8FAFF;
+  border: 1px solid #E6EAF2;
+  border-radius: 12px;
+  font-size: 11px; color: #64748B; line-height: 1.8;
+}
+.sidebar-foot b { color: #4F46E5; }
+.dot-ok {
+  display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+  background: #059669; margin-right: 5px;
+}
+
+/* ---------- 顶栏 ---------- */
+.topbar-crumb { font-size: 14px; color: #64748B; }
+.topbar-crumb b { color: #1E293B; font-weight: 600; }
+.env-tag {
+  font-size: 11px; padding: 4px 12px; border-radius: 6px; font-weight: 600;
+  background: #D1FAE5; color: #059669; letter-spacing: 1px;
+}
+.topbar-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: linear-gradient(135deg, #4F46E5, #7C3AED);
+  color: #fff; font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+
+/* ---------- 页面头 ---------- */
+.page-head { margin-bottom: 20px; }
+.page-title { font-size: 22px; font-weight: 700; color: #1E293B; margin-bottom: 4px; }
+.page-desc { font-size: 13px; color: #64748B; }
+
+/* ---------- 统计卡 ---------- */
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; margin-bottom: 24px; }
+.stat-card {
+  background: #fff; border-radius: 14px; padding: 18px 20px;
+  box-shadow: 0 1px 2px rgba(16,24,40,.04), 0 4px 16px rgba(16,24,40,.06);
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.stat-icon {
+  width: 42px; height: 42px; border-radius: 11px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.stat-label { font-size: 12px; color: #64748B; margin-bottom: 4px; }
+.stat-value { font-size: 26px; font-weight: 700; line-height: 1.1; color: #1E293B; }
+.stat-trend { font-size: 11px; margin-top: 4px; color: #059669; font-weight: 600; }
+.stat-trend.dim { color: #64748B; font-weight: 400; }
+
+/* ---------- 面板 ---------- */
+.panel {
+  background: #fff; border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(16,24,40,.04), 0 4px 16px rgba(16,24,40,.06);
+  overflow: hidden;
+}
+.panel-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 22px; border-bottom: 1px solid #E6EAF2;
+}
+.panel-title { font-size: 15px; font-weight: 700; color: #1E293B; }
+.panel-title span { color: #64748B; font-weight: 400; font-size: 12px; margin-left: 10px; }
+.panel-body { padding: 22px; }
+
+/* ---------- 表格内样式 ---------- */
+.id-cell { font-family: Consolas, monospace; color: #4F46E5; font-size: 12.5px; font-weight: 600; }
+.name-cell b { display: block; font-weight: 600; margin-bottom: 2px; color: #1E293B; }
+.name-cell span { color: #64748B; font-size: 12px; }
+
+/* ---------- 软徽标（配合 antd Tag 使用 className） ---------- */
+.badge-soft { border: none !important; font-weight: 600; }
+.badge-dot::before {
+  content: ''; display: inline-block; width: 6px; height: 6px;
+  border-radius: 50%; background: currentColor; margin-right: 5px;
+}
+
+/* ---------- 登录页 ---------- */
+.login-wrap {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #EEF2FF 0%, #F4F6FB 45%, #E0F2FE 100%);
+}
+.login-card {
+  width: 400px; border-radius: 16px !important;
+  box-shadow: 0 8px 40px rgba(79, 70, 229, .12) !important;
+}
+.login-brand { text-align: center; margin-bottom: 8px; }
+.login-brand .brand-logo { margin: 0 auto 14px; width: 48px; height: 48px; border-radius: 14px; }
