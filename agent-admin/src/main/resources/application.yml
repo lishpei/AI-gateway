@@ -1,0 +1,52 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: agent-admin
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+  jackson:
+    default-property-inclusion: non_null
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    url: jdbc:mysql://localhost:3306/agent_admin?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: mcp
+    password: mcp123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  global-config:
+    banner: false
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+# 管理面自身配置
+agent:
+  admin-token: dev-admin-token-2026          # 管理员 Token（一期简化认证）
+  node-tokens: dev-node-token-1,dev-node-token-2   # 数据面节点 Token 列表（X-Node-Token）
+  gateway-base-url: http://localhost:9081     # 对外 Card 预览用网关地址（数据面实际服务时替换为请求 Host）
+  cred-key: 0123456789abcdef0123456789abcdef  # 上游凭证 AES-256 主密钥（32字符，dev用；生产经环境变量注入）
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+logging:
+  level:
+    root: info
+    com.corp.agent: debug
